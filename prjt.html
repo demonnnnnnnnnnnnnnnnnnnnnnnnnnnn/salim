@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>Fashion</title>
+    <style>
+        h1 {
+            margin-top: 25px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color:#00633f;
+        }
+     .btn {
+        color: black;
+        text-decoration: none;
+        margin-top: 5px;
+        border-radius: 5px;
+        margin-left: 10px;
+        text-align:center;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+     }
+    .x{
+    margin-top: 5px;
+    }
+     .btn-log {
+        margin-top: 5px;
+        background-color: white;
+        color: black;
+        border: 1px solid;
+     }
+.form-control{
+    margin-top: 5px;
+    margin-left: 20px;
+    width: 600px;
+    border: 1px solid black;
+    height: 50px;
+    border-radius: 1px;
+}
+.btnx{
+    margin-top: 5px;
+    margin-left: 50px;
+}
+.table{
+    margin-top:auto;
+
+}
+.header{
+    display: flex;
+    height: 60px;
+    padding-top:15px;
+    list-style: none;
+    background-color: #f4f3f1;
+}
+.ha{
+  margin-left: 40px;
+}
+.ha2{
+    margin-left: 200px;
+    margin-right: 20px;
+}
+.btn-log1:hover{
+color: white;    
+    background-color:#00633f;
+}
+.btn-log1{
+    border: 1px solid black;
+    margin-top:5px;
+}
+
+.col{
+    border: 1px solid rgb(215, 202, 202);
+    margin-left: 5px;
+    margin-top: 10px;
+}
+.row-cont{
+width: 80%;
+margin: 0 auto;
+}
+div .carousel-item.active{
+    margin-left: 10%;
+    padding: 0;
+}
+.question{
+  display: flex;
+  margin-left: 150px;
+  margin-top: 30px;
+}
+.question-x{
+  margin-left: 5px;
+  margin-top: 3px;
+}
+.photos{
+  display: flex;
+  margin-top: 20px;
+
+}
+.pho1{
+  margin-left:155px ;
+}
+.pho2{
+  margin-left: 25px;
+  margin-right: 155px;
+}
+.access1{
+  margin-bottom: 15px;
+  margin-left: 35px;
+}
+.access2{
+  margin-bottom: 35px;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+.access3{
+  margin-left: 35px;
+  margin-bottom:15px ;
+}
+.containerx {
+  position: relative;
+  width: 23%;
+  height: 25%;
+  margin-left: 5px;
+    margin-top: 10px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 20%;
+  transition: .5s ease;
+
+}
+.containerxo{
+  width: 80%;
+margin: 0 auto;
+}
+
+.containerx:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.header a{
+  color: black;
+  text-decoration: none;
+}
+.header a:hover{
+  color: rgb(195, 178, 178);
+}
+.foot{
+  display: flex;
+}
+.footer{
+  background-color: black;
+  padding: 20px;
+  margin-top: 10px;
+}
+.f1{
+  margin: 40px;
+  margin-top: 15px;
+}
+.f2{
+  font-size: 30px;
+  margin-left: 10px;
+  font-style: inherit;
+}
+.f3{
+  margin-top: 20px;
+
+}
+.f1 a{
+  color: rgb(180, 176, 176);
+  text-decoration: none;
+}
+.f3 a{
+  color: rgb(164, 163, 163);
+  text-decoration: none;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+.f-icons{
+  float: right;
+  
+}
+@media (max-width : 600px){
+  .header{
+    display: none;
+  }
+  .hiden{
+    display: none;
+  }
+  
+  .pho1{
+    display: none;
+  }
+  .carousel{
+    display: none;
+  }
+}
+</style>
+</head>
+
+<body>
+    <div class="btn" class="div1">
+        <h1>Fashion  X</h1>
+        <div class="col-xs-4">
+            <input  class="form-control hiden" id="ex3" type="text"  placeholder="   Search for brand, color, etc  ">
+          </div>
+      <a class="btnx" href="#"><select name="pays">
+        <option value="maroc">brows</option>
+        <option value="espagne">Sneakers</option>
+        <option value="italie">Accessories.</option>
+     </select></a>
+    <a class="btn hiden" href="#">News</a>
+    <a class="btn hiden" href="#">About</a>
+    <a class="btn hiden" href="#">Help</a>
+    <a class="btn hiden" href="#">Sell</a>
+    <svg class="x" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+        <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6"/>
+      </svg>
+      
+    <a class="btn btn-log" href="#">Login</a>
+    <a class="btn btn-log1" href="#">Sign Up</a>
+</div>
+    </div>
+   <ul class="header">
+    <li class="ha2"><a href="">SNEAKERS</a> <li>
+    <li class="ha"><a href="">SHOES</a></li>
+    <li class="ha"><a href="">APPAREL</a></li>
+    <li class="ha"><a href="">ELECTRONICS</a></li>
+    <li class="ha"><a href="">TRADING CARDS</a></li>
+    <li class="ha"><a href="">COLLECTIBLES</a></li>
+    <li class="ha"><a href="">ACCESSORIES</a></li>
+    <li class="ha"><a href="">TRADING DEALS</a></li> 
+    </ul>
+<!-- Carousel -->
+<div id="demo" class="carousel slid ecarou" data-bs-ride="carousel">
+ 
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+    
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Capture d’écran 2023-12-17 163313.png" alt="Los Angeles" class="d-block" style="width:80% ; height: 400px;">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="Capture d’écran 2023-12-07 190341.png" alt="Chicago" class="d-block" style="width:80% ; height:400px">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p> </p>
+        </div> 
+      </div>
+      <div class="carousel-item">
+        <img src="Capture d’écran 2023-12-17 162450.png"a alt="New York" class="d-block" style="width:80% ; height: 400px;">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>  
+      </div>
+</div>
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+    <div class="question">
+    <h5>Recently Viewed</h5>
+    <svg class="question-x" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+    </svg>
+    </div>
+
+
+    <div class="row row-cont">
+        <div class="col">
+           <img class="tati" src="Capture d’écran 2023-12-07 191454.png" alt="shoes" style="width:160px ;height: 120px;">
+           <p>Nike kobe 6 potro<br>Reverse Grinch</p>
+           <h4>205$</h4>
+           <p>last sale : 515$</p>
+        </div>
+        <div class="col">
+            <img class="tati" src="Capture d’écran 2023-12-07 191435.png" alt="shoes" style="width:180px ;height: 120px;">
+            <p>Air Force 1<br>Triple White</p>
+            <h4>199$</h4>
+            <p>last sale : 515$</p>
+        </div>
+        <div class="col">
+            <img class="tati" src="Capture d’écran 2023-12-07 191652.png" alt="shoes" style="width:180px ;height: 120px;">
+            <p>Adidas compus 00s core<br>black</p>
+            <h4>215$</h4>
+            <p>last sale : 655$</p>
+        </div>
+        <div class="col">
+            <img class="tati" src="Capture d’écran 2023-12-07 191714.png" alt="shoes" style="width:170px ;height: 120px;">
+            <p>Adidas response CL <br>Bad Bunny </p>
+            <h4>175$</h4>
+            <p>last sale : 317$</p>
+         </div>
+         <div class="col">
+             <img class="tati" src="Capture d’écran 2023-12-17 180148.png" alt="shoes" style="width:160px ;height: 120px;">
+             <p>Nike SB Dunk low <br>Power puff bubble girl</p>
+             <h4>773$</h4>
+             <p>last sale : 515$</p>
+         </div>
+         <div class="col">
+            <img class="tati" src="Capture d’écran 2023-12-17 180300.png" alt="shoes" style="width:170px ;height: 120px;">
+             <p>Nike Air Force 1 low 07<br>White</p>
+             <h4>730$</h4>
+             <p>last sale : 263$</p>
+         </div>
+      </div>
+
+
+      <div class="question">
+        <h5>Jordan 4's</h5>
+        <svg class="question-x" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+        </svg>
+        </div>
+
+      <div class="row row-cont">
+        <div class="col">
+           <img class="tati" src="Capture d’écran 2023-12-19 141015.png" alt="shoes" style="width:160px ;height: 120px;">
+           <p>Jordan 4 Retro <br>Navy</p>
+           <h4>289$</h4>
+           <p>last sale : 373$</p>
+        </div>
+        <div class="col">
+            <img class="tati" src="Capture d’écran 2023-12-19 140915.png" alt="shoes" style="width:180px ;height: 120px;">
+            <p>Jordan 4 Retro military<br>Black</p>
+            <h4>340$</h4>
+            <p>last sale : 449$</p>
+        </div>
+        <div class="col">
+            <img class="tati" src="Capture d’écran 2023-12-19 140847.png" alt="shoes" style="width:180px ;height: 120px;">
+            <p>Jordan 4 Retro Sb pin<br>Green</p>
+            <h4>215$</h4>
+            <p>last sale : 655$</p>
+        </div>
+        <div class="col">
+            <img class="tati" src="Capture d’écran 2023-12-19 140810.png" alt="shoes" style="width:170px;height: 120px;">
+            <p>Jordan 4 retro SE Craft <br>Medium olive </p>
+            <h4>169$</h4>
+            <p>last sale : 242$</p>
+         </div>
+         <div class="col">
+             <img class="tati" src="Capture d’écran 2023-12-19 140743.png" alt="shoes" style="width:160px ;height: 120px;">
+             <p>Jordan 4 Retro Thunder</p>
+             <h4>182$</h4>
+             <p>last sale : 300$</p>
+         </div>
+         <div class="col">
+            <img class="tati" src="Capture d’écran 2023-12-19 140716.png" alt="shoes" style="width:160px ;height: 120px;">
+             <p>Jordan 4 Retro red <br>Cement</p>
+             <h4>210$</h4>
+             <p>last sale : 260$</p>
+         </div>
+      </div>
+
+      
+      <div class="question">
+        <h5>Cloths</h5>
+        <svg class="question-x" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+        </svg>
+        </div>
+
+      <div class="row row-cont">
+        <div class="col">
+           <img class="tati" src="Capture d’écran 2023-12-19 201821.png" alt="shoes" style="width:130px ;height: 120px;">
+           <p>Nike x Stussy<br>Sweater Natural</p>
+           <h4>175$</h4>
+           <p>last sale : 310$</p>
+        </div>
+        <div class="col">
+            <img class="tati" src="Capture d’écran 2023-12-19 201648.png" alt="shoes" style="width:150px ;height: 120px;">
+            <p>Spider OG<br>Hoodie</p>
+            <h4>335$</h4>
+            <p>last sale : 337$</p>
+        </div>
+        <div class="col">
+            <img class="tati" src="Capture d’écran 2023-12-19 165612.png" alt="shoes" style="width:150px ;height: 120px;">
+            <p>Supreme x Nike <br>Puffy jacket</p>
+            <h4>215$</h4>
+            <p>last sale : 655$</p>
+        </div>
+        <div class="col">
+            <img class="tati" src="Capture d’écran 2023-12-19 165525.png" alt="shoes" style="width:150px ;height: 120px;">
+            <p>Stussy x Nike <br>Hoodie </p>
+            <h4>175$</h4>
+            <p>last sale : 317$</p>
+         </div>
+         <div class="col">
+             <img class="tati" src="Capture d’écran 2023-12-19 165501.png" alt="shoes" style="width:160px ;height: 120px;">
+             <p>Denim Tears cotton<br>Sweatshirt</p>
+             <h4>773$</h4>
+             <p>last sale : 515$</p>
+         </div>
+         <div class="col">
+            <img class="tati" src="Capture d’écran 2023-12-19 135855.png" alt="shoes" style="width:170px ;height: 120px;">
+             <p>Stussy x Nike Reversible<br>Varsity Jacket Black</p>
+             <h4>730$</h4>
+             <p>last sale : 263$</p>
+         </div>
+      </div>
+
+      <div class="row row-cont">
+        <div class="col">
+           <img class="tati" src="Capture d’écran 2023-12-19 201915.png" alt="shoes" style="width:150px ;height: 120px;">
+           <p>Supreme Fighter Tee<br>Charcoal</p>
+           <h4>89$</h4>
+           <p>last sale : 115$</p>
+        </div>
+        <div class="col">
+            <img class="tati" src="Capture d’écran 2023-12-19 205217.png" alt="shoes" style="width:150px ;height: 120px;">
+            <p>Nike x Travis Scott<br>Cactus jack</p>
+            <h4>210$</h4>
+            <p>last sale : 237$</p>
+        </div>
+        <div class="col">
+            <img class="tati" src="Capture d’écran 2023-12-07 192128.png" alt="shoes" style="width:150px ;height: 115px;">
+            <p>Supreme Hoodie<br>Grey</p>
+            <h4>215$</h4>
+            <p>last sale : 310$</p>
+        </div>
+        <div class="col">
+            <img class="tati" src="Capture d’écran 2023-12-19 205244.png" alt="shoes" style="width:150px ;height: 120px;">
+            <p>Supreme Tee <br>(2020)</p>
+            <h4>85$</h4>
+            <p>last sale : 117$</p>
+         </div>
+         <div class="col">
+             <img class="tati" src="Capture d’écran 2023-12-19 201603.png" alt="shoes" style="width:140px ;height: 120px;">
+             <p>Denim Tears x Levi's<br>Cotton Jean</p>
+             <h4>118$</h4>
+             <p>last sale : 215$</p>
+         </div>
+         <div class="col">
+            <img class="tati" src="Capture d’écran 2023-12-19 135926.png" alt="shoes" style="width:160px ;height: 120px;">
+             <p>Nike Reversible Hoodie<br>Dark Blue</p>
+             <h4>230$</h4>
+             <p>last sale : 263$</p>
+         </div>
+      </div>
+
+
+
+       
+      <div class="photos">
+        <img class="pho1" src="Capture d’écran 2023-12-20 103107.png" alt="pho" style="width: 800px;height: 400px;">
+        <img class="pho2" src="Capture d’écran 2023-12-19 203608.png" alt="pho" style="width: 400px;height:400px ;">
+      </div>
+
+
+
+       
+      <div class="question">
+        <h5>Accessories</h5>
+        <svg class="question-x" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+        </svg>
+        </div>
+
+      <div class="row row-cont">
+        <div class="col">
+           <img class="tati" src="Capture d’écran 2023-12-20 105359.png" alt="shoes" style="width:150px ;height: 120px;">
+           <p>Supreme New Era Box<br>Black Beanie<br>001</p>
+           <h4>89$</h4>
+           <p>last sale : 115$</p>
+        </div>
+        <div class="col">
+            <img class="access1" src="Capture d’écran 2023-12-19 140029.png" alt="shoes" style="width:65px ;height: 100px;">
+            <p>Casio Analogue MTP130<br>2A2V</p>
+            <h4>54$</h4>
+            <p>last sale : 67$</p>
+        </div>
+        <div class="col">
+            <img class="access2" src="Capture d’écran 2023-12-07 191538.png" alt="shoes" style="width:100px ;height: 60px;">
+            <p>OFF-WHITE virgile Square <br>Frame Sunglasses</p>
+            <h4>243$</h4>
+            <p>last sale : 310$</p>
+        </div>
+        <div class="col">
+            <img class="access3" src="Capture d’écran 2023-12-19 140246.png" alt="shoes" style="width:70px ;height: 100px;">
+            <p>Larve Special Precision <br>PEA-001<br> Sgrn</p>
+            <h4>85$</h4>
+            <p>last sale : 117$</p>
+         </div>
+         <div class="col">
+             <img class="tati" src="Capture d’écran 2023-12-20 105433.png" alt="shoes" style="width:140px ;height: 120px;">
+             <p>OFF White Belt<br>Yellow/Black<br>(2018)</p>
+             <h4>138$</h4>
+             <p>last sale : 145$</p>
+         </div>
+         <div class="col">
+            <img class="tati" src="Capture d’écran 2023-12-19 164939.png" alt="shoes" style="width:180px ;height: 100px;">
+             <p>Louis Vuiton<br>Mini Bambag<br>Lv-6767</p>
+             <h4>1,679$</h4>
+             <p>last sale : 1,860$</p>
+         </div>
+      </div>
+<div class="question">
+      <h6>As Seen On Instagram<br>Use #GotItOnStockX and you could be featured.</h6>
+    </div>
+<div class="row containerxo">
+  <div class="col-x containerx">
+    <img src="Capture d’écran 2023-12-20 112346.png" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">Shop Now</div>
+    </div>
+  </div>
+
+  <div class="col-x containerx">
+    <img src="Capture d’écran 2023-12-20 112251.png" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">Shop Now</div>
+    </div>
+  </div>
+
+  <div class="col-x containerx">
+    <img src="Capture d’écran 2023-12-20 112232.png" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">Shop Now</div>
+    </div>
+  </div>
+
+  <div class="col-x containerx">
+    <img src="Capture d’écran 2023-12-20 112208.png" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">Shop Now</div>
+    </div>
+  </div> 
+</div>
+<div class="footer">
+  <p class="f2">Fashion X.access </p>
+  <div class="foot">
+  <div class="f3">
+    <a href="#">air jordan</a><br>
+    <a href="#">air jordan 1</a><br>
+    <a href="#">air jordan 4</a><br>
+    <a href="#">air jordan 1 low</a><br>
+    <a href="#">air jordan 11</a><br>
+  </div>
+  <div class="f1">
+    <a href="#">New Balance</a><br>
+    <a href="#">New Balance 325</a><br>
+    <a href="#">New Balance 370</a><br>
+    <a href="#">New Balance 225</a><br>
+    <a href="#">New Balance women</a><br>
+  </div>
+  <div class="f1">
+    <a href="#">ACCESSORIES</a><br>
+    <a href="#">swatch x omega</a><br>
+    <a href="#">supreme waist bag</a><br>
+    <a href="#">Gucci New York cap</a><br>
+    <a href="#">Marc Jacob tut bag</a><br>
+  </div>
+  <div class="f3">
+    <a href="#">nike sb </a><br>
+    <a href="#">dunk low</a><br>
+    <a href="#">lastest drop</a><br>
+    <a href="#">comments</a><br>
+    <a href="#">guide</a><br>
+  </div>
+  <div class="f1">
+    <a href="#">New year drops</a><br>
+    <a href="#">New Balance 325</a><br>
+    <a href="#">air jordan 4</a><br>
+    <a href="#">New Balance 225</a><br>
+    <a href="#">nike kobe frame</a><br>
+  </div>
+  <div class="f1">
+    <a href="#">sell</a><br>
+    <a href="#">guide</a><br>
+    <a href="#">shipping</a><br>
+    <a href="#">news</a><br>
+    <a href="#">lasteste</a><br>
+  </div>
+  <div class="f3">
+    <a href="#">air jordan</a><br>
+    <a href="#">air jordan 1</a><br>
+    <a href="#">air jordan 4</a><br>
+    <a href="#">air jordan 1 low</a><br>
+    <a href="#">air jordan 11</a><br>
+  </div>
+  <div class="f1">
+    <a href="#">New Balance</a><br>
+    <a href="#">New Balance 325</a><br>
+    <a href="#">New Balance 370</a><br>
+    <a href="#">New Balance 225</a><br>
+    <a href="#">New Balance women</a><br>
+  </div>
+  <div class="f1">
+    <a href="#">ACCESSORIES</a><br>
+    <a href="#">swatch x omega</a><br>
+    <a href="#">supreme waist bag</a><br>
+    <a href="#">Gucci New York cap</a><br>
+    <a href="#">Marc Jacob tut bag</a><br>
+  </div>
+  <div class="f-icons">
+    <a href="#" class="fa fa-facebook"></a><br>
+    <a href="#" class="fa fa-twitter"></a><br>
+   <a href="#" class="fa fa-google"></a>
+  </div>
+</div>
+</body>
+</html>
